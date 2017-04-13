@@ -15,7 +15,7 @@ describe('calculator functionality', function() {
     element(by.css('#number2')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('2')
   });
-  
+
   it('should update the display with a result of operation', function(){
     element(by.css('#number1')).click();
     element(by.css('#operator_add')).click();
@@ -42,7 +42,7 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('-1');
   });
 
-  it('should set the running total to zero', function(){
+  it('should set the running total to zero when trying to divide by zero', function(){
     element(by.css('#number5')).click();
     element(by.css('#operator_divide')).click();
     element(by.css('#number0')).click();
