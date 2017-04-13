@@ -69,7 +69,7 @@ Calculator.prototype = {
     // replace the previous total with the current running total and flag that a
     // new total has been calculated
     if(this.runningTotal === Infinity){
-      this.runningTotal = this.previousTotal;
+      this.runningTotal = 0;
       this.newTotal = true;
     }
     this.previousTotal = this.runningTotal;
